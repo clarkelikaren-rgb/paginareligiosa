@@ -1,0 +1,122 @@
+/* ====== BASE ====== */
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f4f7ff; /* blanco suave */
+}
+
+/* ====== HEADER ====== */
+header{
+    background: #0b2a6f; /* azul universitario */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+header span{
+    display: block;
+    font-size: 14px;
+    color: #d4af37; /* dorado */
+    margin-top: 5px;
+}
+
+/* ====== MENU BOTONES ====== */
+nav{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav a{
+    text-decoration: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #0b2a6f; /* azul */
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+    border: 2px solid transparent;
+}
+
+nav a:hover{
+    background: #d4af37; /* dorado */
+    color: #0b2a6f;
+    transform: scale(1.05);
+}
+
+/* ====== HERO ====== */
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* ====== TARJETA DEL FORMULARIO ====== */
+.card{
+    width: 380px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+
+    border-top: 6px solid #d4af37; /* detalle dorado */
+}
+
+/* TITULO DEL FORMULARIO */
+.card h2{
+    text-align: center;
+    color: #0b2a6f;
+    margin-bottom: 20px;
+}
+
+/* LABELS */
+label{
+    display: block;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #0b2a6f;
+}
+
+/* INPUTS */
+input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* efecto al escribir */
+input:focus{
+    border-color: #d4af37;
+    box-shadow: 0 0 5px rgba(212,175,55,0.5);
+}
+
+/* BOTON */
+button{
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+
+    background: #0b2a6f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* hover del botón */
+button:hover{
+    background: #d4af37;
+    color: #0b2a6f;
+    transform: scale(1.03);
+}

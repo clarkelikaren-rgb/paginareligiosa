@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mí</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1 class="titulo">Sobre Mí</h1>
+</header>
+
+<!-- MENÚ -->
+<nav class="navegacion-principal contenedor">
+    <a href="index.html">🏠 Inicio</a>
+    <a href="sobremi.html">👤 Sobre Mi</a>
+    <a href="catalogo.html">📖 Catálogo</a>
+    <a href="contacto.html">📞 contacto</a>
+    
+</nav>  
+
+<!-- PRESENTACIÓN -->
+<section class="about-center">
+
+    <div class="about-card">
+
+        <img src="img/perfil.jpg" alt="Foto de perfil" class="about-img">
+
+        <h2>Fernando López</h2>
+
+        <h3>Ministerio Pastoral Adventista</h3>
+
+        <p>
+            Soy un servidor dedicado a compartir el mensaje de esperanza,
+            fe y salvación a través de la palabra de Dios.
+            Mi misión es fortalecer la vida espiritual de las personas
+            y acompañarlas en su crecimiento cristiano.
+        </p>
+
+        <a class="boton" href="contacto.html">🙏 Contactar</a>
+
+    </div>
+
+</section>
+
+<section class="carrusel" id="carousel">
+    <div class="carousel-container">
+        <div class="slides">
+            <img src="img/imagen1.jpg.webp" alt="Imagen 1">
+        </div>
+
+        <div class="slides">
+            <img src="img/imagen2.jpg.webp" alt="Imagen 2">
+        </div>
+
+        <div class="slides">
+            <img src="img/imagen3.jpg.webp" alt="Imagen 3">
+        </div>
+    </div>
+
+    <div class="carousel-controls">
+        <button class="carousel-btn prev" id="prev-btn" aria-label="Imagen anterior">❮</button>
+        <button class="carousel-btn next" id="next-btn" aria-label="Siguiente imagen">❯</button>
+    </div>
+
+  <div class="carousel-indicators">
+    <span class="indicator active" data-index="0"></span>
+    <span class="indicator" data-index="1"></span>
+    <span class="indicator" data-index="2"></span>
+</div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const slides = document.querySelectorAll(".slides");
+    const indicators = document.querySelectorAll(".indicator");
+    const prevBtn = document.getElementById("prev-btn");
+    const nextBtn = document.getElementById("next-btn");
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+
+        slides.forEach(slide => {
+            slide.classList.remove("active");
+        });
+
+        indicators.forEach(indicator => {
+            indicator.classList.remove("active");
+        });
+
+        currentIndex = index;
+
+        if (currentIndex >= slides.length) {
+            currentIndex = 0;
+        }
+
+        if (currentIndex < 0) {
+            currentIndex = slides.length - 1;
+        }
+
+        slides[currentIndex].classList.add("active");
+        indicators[currentIndex].classList.add("active");
+    }
+
+    nextBtn.addEventListener("click", function () {
+        showSlide(currentIndex + 1);
+    });
+
+    prevBtn.addEventListener("click", function () {
+        showSlide(currentIndex - 1);
+    });
+
+    setInterval(function () {
+        showSlide(currentIndex + 1);
+    }, 3000);
+
+    showSlide(0);
+
+});
+</script>
+
+</body>
+</html>
